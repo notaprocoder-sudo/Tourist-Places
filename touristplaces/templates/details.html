@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{fr.thb.url}}" alt="" width="520px;" height="320px;" style="margin-top:120px;margin-left:-30px;">
+        </div>
+        <div class="col-md-6" style="margin-top:60px;">
+            <h1 style="color:red;" >{{fr.name}}</h1>
+            <h2>{{fr.known}}</h2> <br>
+            <h5>{{fr.desc}}</h5>
+            <button onclick="window.history.back();">Back</button>
+            <a class="btn btn-danger" href="{% url 'tourapp:dele' fr.id %}">Delete</a>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
